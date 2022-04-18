@@ -21,6 +21,7 @@ class CreateManageSalariesTable extends Migration
             $table->decimal('gross_salary')->nullable();
             $table->softDeletes();
             $table->timestamps();
+            $table->foreign('user_id')->on('users')->references('id')->onUpdate('NO ACTION')->onDelete('CASCADE');
         });
     }
 

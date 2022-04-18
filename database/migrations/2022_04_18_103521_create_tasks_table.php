@@ -23,6 +23,7 @@ class CreateTasksTable extends Migration
             $table->boolean('status')->default(0);
             $table->softDeletes();
             $table->timestamps();
+            $table->foreign('user_id')->on('users')->references('id')->onUpdate('NO ACTION')->onDelete('CASCADE');
         });
     }
 

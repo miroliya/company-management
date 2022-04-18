@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
+            $table->foreign('role_id')->on('user_roles')->references('id')->onUpdate('NO ACTION')->onDelete('CASCADE');
         });
     }
 

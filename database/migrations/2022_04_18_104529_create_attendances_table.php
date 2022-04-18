@@ -23,6 +23,7 @@ class CreateAttendancesTable extends Migration
             $table->date('out')->nullable();
             $table->softDeletes();
             $table->timestamps();
+            $table->foreign('user_id')->on('users')->references('id')->onUpdate('NO ACTION')->onDelete('CASCADE');
         });
     }
 
