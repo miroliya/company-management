@@ -8,37 +8,25 @@ class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
-     *
      * @return void
      */
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('role_id')->nullable()->comment('ID from users roles table');
-            $table->string('username')->nullable();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
-            $table->string('image')->nullable();
+            $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('phone')->nullable();
-            $table->string('gender')->nullable();
-            $table->text('address')->nullable();
-            $table->date('dob')->nullable();
-            $table->decimal('age')->nullable();
-            $table->boolean('status')->default(0);
-            $table->softDeletes();
+            $table->string('file_path')->nullable()->default('assets/images/users/default.png');
+            $table->tinyInteger('status')->nullable()->default(1);
             $table->rememberToken();
             $table->timestamps();
-            $table->foreign('role_id')->on('user_roles')->references('id')->onUpdate('NO ACTION')->onDelete('CASCADE');
         });
     }
 
     /**
      * Reverse the migrations.
-     *
      * @return void
      */
     public function down()
