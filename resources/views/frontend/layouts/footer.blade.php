@@ -6,7 +6,6 @@
 </div>
 <!-- SlimScroll -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
-
 <script>
     setTimeout(function () {
         $('.alert').fadeOut('slow');

@@ -47,13 +47,13 @@
                 </li>
                 <li>
                     <a href="{{ URL :: to('/admin/roles') }}">
-                        <i class="metismenu-icon"></i>
+                        <i class="metismenu-icon pe-7s-bookmarks"></i>
                         Roles
                     </a>
                 </li>
                 <li>
                     <a href="{{ URL :: to('/admin/permissions') }}">
-                        <i class="metismenu-icon"></i>
+                        <i class="metismenu-icon pe-7s-tools"></i>
                         Permission
                     </a>
                 </li>

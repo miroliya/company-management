@@ -30,6 +30,7 @@
 <script src="{{ asset('/assets/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.printElement.min.js') }}"></script>
 
+
 <script>
     $.fn.modal.Constructor.prototype.enforceFocus = function () {
     };

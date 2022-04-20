@@ -54,8 +54,8 @@ class LoginController extends Controller
 
             // if successful, then create laravel passport token and redirect to their intended location
             $user = Auth::guard('admin')->user();
-            $token = $user->createToken('adminApiToken')->accessToken;
-            Cookie::queue('access_token', $token, 4500);
+            // $token = $user->createToken('adminApiToken')->accessToken;
+            // Cookie::queue('access_token', $token, 4500);
             return redirect()->route('admin.dashboard');
         }
         // if unsuccessful, then redirect back to the login with the form data

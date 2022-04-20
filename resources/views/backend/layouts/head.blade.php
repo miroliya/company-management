@@ -20,7 +20,6 @@
 <!-- Override CSS file - add your own CSS rules -->
 <link rel="stylesheet" href="{{ asset('/assets/css/custom_admin_style.css') }}">
 
-
 <!-- jQuery 3.4.1 -->
 <script src="{{ asset('/assets/js/jquery-3.4.1.min.js') }}"></script>
 <!-- Bootstrap 4 -->
